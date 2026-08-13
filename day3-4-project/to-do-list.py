@@ -17,7 +17,8 @@ while action != "5":
             tasks.append(user_input)
             more = input("do you want to add more tasks (y/n)?")
     elif action == "2":
-        print(f"here is your list of tasks {tasks}")
+        for i, item in enumerate(tasks):
+            print(f"{i+1}. {item['task']} - Done {item['done']}")
     elif action == "3":
         remove = input(f"here is your list of tasks {tasks}, which one do you want to remove (type with number base on the order of the list you want to delete ex. 1, 3:)")
         removed_tasks = tasks.pop(remove)
