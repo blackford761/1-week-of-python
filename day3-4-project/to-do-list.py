@@ -1,6 +1,6 @@
 tasks = []
 action = ""
-def repeat_view(tasks, status):
+def repeat_view():
     for i, item in enumerate(tasks):
         print(f"{i+1}. {item['task']} - Done: {item['done']}")
 while action != "5":
@@ -20,11 +20,10 @@ while action != "5":
             tasks.append(user_input)
             more = input("do you want to add more tasks (y/n)?")
     elif action == "2":
-        repeat_view
+        repeat_view()
     elif action == "3":
-        repeat_view
+        repeat_view()
         remove = int(input(f"here is your list of tasks, which one do you want to Mark As Done (type with number base on the order of the list you want to delete ex. 1):"))
         removed_tasks = tasks.pop(remove - 1)
         print(f"here is your mark as done task/s {removed_tasks}")
-        repeat_view
-
+        repeat_view()
