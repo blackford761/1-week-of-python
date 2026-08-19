@@ -23,7 +23,13 @@ while action != "5":
         repeat_view()
     elif action == "3":
         repeat_view()
-        remove = int(input(f"here is your list of tasks, which one do you want to Mark As Done (type with number base on the order of the list you want to delete ex. 1):"))
-        removed_tasks = tasks.pop(remove - 1)
-        print(f"here is your mark as done task/s {removed_tasks}")
+        done = int(input("which task you want to mark as done pick the order number (e.g. 1)"))
+        marked_task = tasks[done-1]
+        marked_task ["done"] = True
         repeat_view()
+    elif action == "4":
+        repeat_view()
+        remove = int(input("here is your list of tasks, which one do you want to Mark As Done (type with number base on the order of the list you want to delete e.g. 1):"))
+        removed_tasks = tasks.pop(remove - 1)
+        repeat_view()
+print("Goodbye")
